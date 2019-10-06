@@ -4,7 +4,7 @@ public class auditionSheet
 public static void questionare()
 {
 	
-	System.out.println("Hello " + Website.name + ". Here are a few questions for your common audition packet.");
+	System.out.println("Hello " + SigningIn.name + ". Here are a few questions for your common audition packet.");
 	System.out.println("1) What is your age? ");
 	int age = Website.intInput.nextInt();
 	System.out.println("2) What are your top three dream roles?");
@@ -18,6 +18,6 @@ public static void questionare()
 	System.out.println("6) What is your pant size?");
 	String pantSize = Website.stringInput.nextLine();
 	System.out.println("Thank you for your time!");
-	Website.auditionPacket.add(new PeopleInfo(Website.name, age, roles, experience, allergies, shirtSize, pantSize ));
+	Website.auditionPacket.add(new PeopleInfo(SigningIn.name, age, roles, experience, allergies, shirtSize, pantSize ));
 }
 }

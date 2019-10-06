@@ -1,7 +1,7 @@
 
 public class SigningIn 
 {
-
+	static String name ;
 public static void loginData()
 {
 	Website.logIn.add(new SignInInfo("Danielle Failor" , "Student Director", "Daniellef3606", "wonderWoman"));
@@ -48,6 +48,7 @@ public static void login()
 		System.out.println("Incorrect username");
 		login();
 	}
+	Website.incorrectAnswer = 0;
 	System.out.println("Enter password:");
 	String password = Website.stringInput.nextLine();
 	for(int i = 0; i < Website.logIn.size();i++)
@@ -69,22 +70,24 @@ public static void login()
 		System.out.println("Incorrect password");
 		login();
 	}
+	name =  Website.logIn.get(Website.person).getName();
 	
-
 }
+
 public static void signUp()
 {
 	System.out.println("What is your first and last name?");
-	String name = Website.stringInput.nextLine();
+	String name1 = Website.stringInput.nextLine();
 	System.out.println("What is your position in theatre?");
 	String position = Website.stringInput.nextLine();
 	System.out.println("What will your username be?");
 	String username = Website.stringInput.nextLine();
 	System.out.println("What will your password be?");
 	String password = Website.stringInput.nextLine();
-	Website.logIn.add(new SignInInfo(name, position, username, password));
-	
+	Website.logIn.add(new SignInInfo(name1, position, username, password));
+	name = Website.logIn.get(Website.person).getName();
 }
+
 public static void welcomePatron()
 {
 System.out.println("Hello " + Website.logIn.get(Website.person).getName() + " Would you like to look at:");	
@@ -101,9 +104,9 @@ else if(choice == 2)
 {
 	propList.viewOrEdit();
 }
-else if(choice == 3)
+ if(choice == 3)
 {
-	TheatreDictionary.viewOrSearch();
+	TheatreDictionary.viewTheatre();
 }
 else if(choice ==4)
 {
@@ -112,8 +115,9 @@ else if(choice ==4)
 }
 else
 {
-	System.out.println("Answer the question");
-	welcomePatron();
+//	System.out.println("Answer the question");
+//	welcomePatron();
+	TheatreDictionary.viewTheatre();
 }
 }
 
