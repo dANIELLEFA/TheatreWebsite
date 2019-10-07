@@ -58,6 +58,7 @@ public static void login()
 			System.out.println("Correct password");
 			Website.correctAnswer++;
 			Website.person = i;
+			name =  Website.logIn.get(Website.person).getName();
 		}
 	
 	}
@@ -70,7 +71,7 @@ public static void login()
 		System.out.println("Incorrect password");
 		login();
 	}
-	name =  Website.logIn.get(Website.person).getName();
+	
 	
 }
 
@@ -85,12 +86,12 @@ public static void signUp()
 	System.out.println("What will your password be?");
 	String password = Website.stringInput.nextLine();
 	Website.logIn.add(new SignInInfo(name1, position, username, password));
-	name = Website.logIn.get(Website.person).getName();
+	name = name1;
 }
 
 public static void welcomePatron()
 {
-System.out.println("Hello " + Website.logIn.get(Website.person).getName() + " Would you like to look at:");	
+System.out.println("Hello " + name + " Would you like to look at:");	
 System.out.println("1) Audition profile");
 System.out.println("2) Prop List");
 System.out.println("3) Theatre Dictionary");
