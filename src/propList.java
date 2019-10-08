@@ -1,6 +1,8 @@
 
 public class propList 
 {
+	static int first = 1;
+	static int answer;
 public static void loadData()
 {
 	Website.propsList.add(new Props("Bike", "Stanley", "Caleb","Not in theatre"));
@@ -12,19 +14,19 @@ public static void loadData()
 }
 public static void viewOrEdit()
 {
-	int first = 1;
+	
 	if(first == 1)
 	{
 		loadData();
 		first++;
 	}
 	System.out.println("Would you like to 1)view or 2)edit?");
-	Website.yesAndNoQuestion = Website.intInput.nextInt();
-	if (Website.yesAndNoQuestion == 1)
+	answer = Website.intInput.nextInt();
+	if (answer == 1)
 	{
 		viewProps();
 	}
-	if (Website.yesAndNoQuestion == 2)
+	if (answer == 2)
 	{
 		editProps();
 	}

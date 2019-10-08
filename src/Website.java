@@ -21,6 +21,7 @@ static int person;
 				//{
 					SigningIn.welcomePatron();
 				//}
+				
 
 			}
 		public static void yesOrNo()
@@ -30,16 +31,73 @@ static int person;
 			}
 		public static void areYouDone()
 		{
-			System.out.println("Do you want to leave this website?");
+			System.out.println("Do you want to leave the Theatre Website?");
 			yesOrNo();
 			if(yesAndNoQuestion == 1)
 			{
 				System.out.println("Goodbye");
+				Website.logging();
+				Website.loggingOff();
 			}
 			else
 			{
 				SigningIn.welcomePatron();
 			}
 		}
+		public static void delay()
+		{
+			try
+				{
+					Thread.sleep(1000);
+				}catch(InterruptedException e){
+					
+					e.printStackTrace();
+				}
+		}
+		public static void logging()
+		{
+			System.out.print("L");
+			delay();
+			System.out.print("O");
+			delay();
+			System.out.print("G");
+			delay();
+			System.out.print("G");
+			delay();
+			System.out.print("I");
+			delay();
+			System.out.print("N");
+			delay();
+			System.out.print("G");
+			delay();
+		}
+		public static void loggingOn()
+		{
+			System.out.print(" ");
+			System.out.print("O");
+			delay();
+			System.out.print("N");
+			delay();
+			System.out.print(".");
+			delay();
+			System.out.print(".");
+			delay();
+			System.out.println(".");
+		}
+		public static void loggingOff()
+			{
+				System.out.print(" ");
+				System.out.print("O");
+				delay();
+				System.out.print("F");
+				delay();
+				System.out.print("F");
+				delay();
+				System.out.print(".");
+				delay();
+				System.out.print(".");
+				delay();
+				System.out.println(".");
+			}
 
 	}

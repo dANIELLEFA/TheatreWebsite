@@ -2,31 +2,50 @@ import java.util.Collections;
 
 public class TheatreDictionary 
 {
+	static int answer;
 public static void searchWordsOrNot()
 {
-	System.out.println("Would you like to search up the first letter of the word?");
+	System.out.println("Would you like to 1) search up the first letter of the word or 2) just view?");
 	Website.yesOrNo();
-	if(Website.yesAndNoQuestion == 1)
+	 answer = Website.intInput.nextInt();
+	if(answer == 1)
 	{
-		
+		viewTheatre();
 		
 	}
 	else
 	{
-		SigningIn.welcomePatron();
+		viewTheatre();
 	}
 }
 public static void search()
 {
 	System.out.println("Enter the first letter of the word you want:");
 	String firstLetter = Website.stringInput.nextLine();
+	int there = 0;
 	for(int i = 0; i< Website.Dictionary.size(); i++)
 	{
 		if(Website.Dictionary.get(i).getWord().substring(0, 1).equals(firstLetter))
 		{
-			System.out.println(Website.Dictionary.get(i).getWord() + " :" + Website.Dictionary.get(i).getDefinition());
+			System.out.println(Website.Dictionary.get(i).getWord() + ": " + Website.Dictionary.get(i).getDefinition());
+			there++;
 		}
+		
 	}
+	if(there == 0)
+		{
+			System.out.println("There are no words in this dictionary that start with that letter.");
+		}
+	System.out.println("Would you like to search another word?");
+	Website.yesOrNo();
+	if(Website.yesAndNoQuestion == 1)
+		{
+			search();
+		}
+	else
+		{
+			Website.areYouDone();
+		}
 }
 public static void loadWords()
 {
@@ -73,7 +92,26 @@ public static void viewTheatre()
 	//	Collections.sort(Website.Dictionary.get(i).getWord());
 		System.out.println(Website.Dictionary.get(i).getWord() + " :" + Website.Dictionary.get(i).getDefinition());
 	}
-	search();
+	if(answer == 1)
+		{
+			search();
+		}
+	else
+		{
+			System.out.println("Would you like to search a word or leave this part of the website");
+			Website.yesOrNo();
+			if(Website.yesAndNoQuestion == 1)
+				{
+					search();
+				}
+			else
+				{
+					SigningIn.welcomePatron();
+				}
+		}
+
+	
 }
+
 
 }

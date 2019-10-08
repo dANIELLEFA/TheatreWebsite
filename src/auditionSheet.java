@@ -19,5 +19,6 @@ public static void questionare()
 	String pantSize = Website.stringInput.nextLine();
 	System.out.println("Thank you for your time!");
 	Website.auditionPacket.add(new PeopleInfo(SigningIn.name, age, roles, experience, allergies, shirtSize, pantSize ));
+	Website.areYouDone();
 }
 }

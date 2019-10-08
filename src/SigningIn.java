@@ -4,7 +4,13 @@ public class SigningIn
 	static String name ;
 public static void loginData()
 {
-	Website.logIn.add(new SignInInfo("Danielle Failor" , "Student Director", "Daniellef3606", "wonderWoman"));
+	Website.logIn.add(new SignInInfo("Danielle Failor" , "student director/ Tech", "Daniellef3606", "wonderWoman"));
+	Website.logIn.add(new SignInInfo("Nick Giacomozzi" , "actor", "Hugo", "theGirl"));
+	Website.logIn.add(new SignInInfo("Emy McGuire" , "actor", "Judas", "sheWhoMustNotBeNamed"));
+	Website.logIn.add(new SignInInfo("Connie Brooks" , "director", "Boss", "HugoAndConnieForever"));
+	Website.logIn.add(new SignInInfo("Hugo" , "audience member", "Coach", "sailing"));
+	Website.logIn.add(new SignInInfo("Ted" , "actor", "WildTed", "theStar"));
+	Website.logIn.add(new SignInInfo("Jane" , "actor", "Helen", "ILOVETEDTEDTEDTED"));
 }
 public static void loginOrSignIn()
 {
@@ -46,7 +52,9 @@ public static void login()
 	if(Website.incorrectAnswer >= 1)
 	{
 		System.out.println("Incorrect username");
+		Website.incorrectAnswer = 0;
 		login();
+		
 	}
 	Website.incorrectAnswer = 0;
 	System.out.println("Enter password:");
@@ -69,9 +77,12 @@ public static void login()
 	if(Website.incorrectAnswer >= 1)
 	{
 		System.out.println("Incorrect password");
+		Website.incorrectAnswer = 0;
 		login();
+		
 	}
-	
+	Website.logging();
+	Website.loggingOn();
 	
 }
 
@@ -87,6 +98,8 @@ public static void signUp()
 	String password = Website.stringInput.nextLine();
 	Website.logIn.add(new SignInInfo(name1, position, username, password));
 	name = name1;
+	Website.logging();
+	Website.loggingOn();
 }
 
 public static void welcomePatron()
@@ -107,12 +120,14 @@ else if(choice == 2)
 }
  if(choice == 3)
 {
-	TheatreDictionary.viewTheatre();
+	TheatreDictionary.searchWordsOrNot();
 }
 else if(choice ==4)
 {
 	System.out.println("Goodbye!");
-	Website.lookingAtWebsite = false;
+	Website.logging();
+	Website.loggingOff();
+	//Website.lookingAtWebsite = false;
 }
 else
 {
