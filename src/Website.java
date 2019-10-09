@@ -31,6 +31,7 @@ static int person;
 			}
 		public static void areYouDone()
 		{
+			
 			System.out.println("Do you want to leave the Theatre Website?");
 			yesOrNo();
 			if(yesAndNoQuestion == 1)
