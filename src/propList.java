@@ -5,11 +5,12 @@ public class propList
 	static int answer;
 public static void loadData()
 {
-	Website.propsList.add(new Props("Bike", "Stanley", "Caleb","Not in theatre"));
-	Website.propsList.add(new Props("Books", "Mrs. Finch", "Marina","In theatre"));
+	Website.propsList.add(new Props("Bike", "Stanley", "Caleb Coit","Not in theatre"));
+	Website.propsList.add(new Props("Books", "Mrs. Finch", "Marina Hoft","In theatre"));
 	Website.propsList.add(new Props("Clipboard", "Silvia", "Hannah","In theatre"));
-	Website.propsList.add(new Props("Basketballs", "Ted, Stanley", "Bobby, Greg","In theatre"));
-	Website.propsList.add(new Props("Tissues", "Mrs. Brooks", "Emy ","In theatre"));
+	Website.propsList.add(new Props("Basketballs", "Ted, Stanley", "Bobby Sannwald, Greg","In theatre"));
+	Website.propsList.add(new Props("Tissues", "Mrs. Brooks", "Emy McGuire","In theatre"));
+	Website.propsList.add(new Props("Broom", "Mrs. Brooks", "Emy McGuire","In theatre"));
 	Website.propsList.add(new Props("Soccerball", "Annie", "Danielle Failor","In theatre"));
 }
 public static void viewOrEdit()
@@ -39,11 +40,12 @@ public static void viewProps()
 		System.out.println(Website.propsList.get(i).getProp() + " for "+ Website.propsList.get(i).getActorName() + " and it is " + Website.propsList.get(i).getAvailability());
 		
 	}
-	for (int i = 0; i < Website.propsList.size(); i++)
+	for (int j = 0; j < Website.propsList.size(); j++)
 	{
-		if (Website.propsList.get(Website.person).getActorName().equals(SigningIn.name))
+		if (Website.propsList.get(j).getActorName().equals(SigningIn.name))
 		{
-			System.out.println(Website.propsList.get(i).getProp() + " and it is " + Website.propsList.get(i).getAvailability());
+			System.out.println("These are your props:");
+			System.out.println(Website.propsList.get(j).getProp() + " and it is " + Website.propsList.get(j).getAvailability());
 		}
 		
 	}

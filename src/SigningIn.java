@@ -13,6 +13,7 @@ public static void loginData()
 	Website.logIn.add(new SignInInfo("Jane" , "actor", "Helen", "ILOVETEDTEDTEDTED"));
 	Website.logIn.add(new SignInInfo("Finch" , "audience member", "bird", "studentsAreTerrible"));
 	Website.logIn.add(new SignInInfo("Bobby Sannwald" , "actor", "Daisy", "Daisy2"));
+	
 }
 public static void loginOrSignIn()
 {

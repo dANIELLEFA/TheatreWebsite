@@ -6,7 +6,7 @@ public class TheatreDictionary
 public static void searchWordsOrNot()
 {
 	System.out.println("Would you like to 1) search up the first letter of the word or 2) just view?");
-	Website.yesOrNo();
+	
 	 answer = Website.intInput.nextInt();
 	if(answer == 1)
 	{
@@ -90,7 +90,7 @@ public static void viewTheatre()
 	for(int i = 0; i < Website.Dictionary.size(); i++)
 	{
 	//	Collections.sort(Website.Dictionary.get(i).getWord());
-		System.out.println(Website.Dictionary.get(i).getWord() + " :" + Website.Dictionary.get(i).getDefinition());
+		System.out.println(Website.Dictionary.get(i).getWord() + ": " + Website.Dictionary.get(i).getDefinition());
 	}
 	if(answer == 1)
 		{
