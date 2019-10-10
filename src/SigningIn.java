@@ -131,7 +131,7 @@ else if(choice ==4)
 	System.out.println("Goodbye!");
 	Website.logging();
 	Website.loggingOff();
-	//Website.lookingAtWebsite = false;
+	System.exit(0);
 }
 else
 {

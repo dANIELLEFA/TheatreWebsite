@@ -39,6 +39,7 @@ static int person = 0;
 				System.out.println("Goodbye");
 				Website.logging();
 				Website.loggingOff();
+				System.exit(0);
 			}
 			else
 			{
