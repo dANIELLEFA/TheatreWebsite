@@ -12,7 +12,7 @@ static boolean lookingAtWebsite = true;
 static int yesAndNoQuestion;
 static int correctAnswer =0;
 static int incorrectAnswer =0;
-static int person;
+static int person = 0;
 
 		public static void main(String[] args)
 			{

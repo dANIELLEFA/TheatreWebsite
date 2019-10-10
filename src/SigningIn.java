@@ -45,6 +45,7 @@ public static void login()
 		{
 			System.out.println("Correct username");
 			Website.correctAnswer++;
+			Website.person = i;
 		}
 	
 	}
@@ -119,7 +120,7 @@ if(choice == 1)
 }
 else if(choice == 2)
 {
-	propList.viewOrEdit();
+	PropList.viewOrEdit();
 }
  if(choice == 3)
 {

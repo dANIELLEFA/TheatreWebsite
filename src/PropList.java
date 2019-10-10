@@ -1,5 +1,5 @@
 
-public class propList 
+public class PropList 
 {
 	static int first = 1;
 	static int answer;
